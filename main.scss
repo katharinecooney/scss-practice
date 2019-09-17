@@ -6,21 +6,36 @@ p {
   font-size: 1.5rem;
 }
 
+// border-radius no longer requires prefixes 
+// but for the sake of the tutorial, i will include!
+// i think the benefit of creating a mixin here,
+// instead of adding this code to .panel,
+// is that we can add a parameter to our mixin
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
 .panel {
   border: 3px solid dodgerblue;
   background: rgb(144, 232, 238);
   margin: 10px;
 }
 
-.little-panel{
+.little-panel {
   // .little-panel will inherit all of .panel's code!
   @extend .panel;
   font-size: 12px;
   padding: 5px;
+  @include border-radius(5px);
 }
 
-.big-panel{
+.big-panel {
+  // .big-panel will inherit all of .panel's code!
   @extend .panel;
   font-size: 32px;
   padding: 20px;
+  @include border-radius(20px)
 }
