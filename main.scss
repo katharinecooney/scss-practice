@@ -1,2 +1,26 @@
 @import 'profile';
 @import 'navbar';
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.panel {
+  border: 3px solid dodgerblue;
+  background: rgb(144, 232, 238);
+  margin: 10px;
+}
+
+.little-panel{
+  // .little-panel will inherit all of .panel's code!
+  @extend .panel;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.big-panel{
+  @extend .panel;
+  font-size: 32px;
+  padding: 20px;
+}
