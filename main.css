@@ -31,7 +31,7 @@ nav ul li a:hover {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .panel, .little-panel, .big-panel {
@@ -50,5 +50,22 @@ p {
   font-size: 32px;
   padding: 20px;
   border-radius: 20px;
+}
+
+.button, .jumbo-button, .light-button {
+  background: #16A085;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.jumbo-button {
+  padding: 35px;
+}
+
+.light-button {
+  background: #21f0c8;
 }
 /*# sourceMappingURL=main.css.map */
